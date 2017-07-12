@@ -24,9 +24,11 @@ sess.run(tf.assign(b, 2))
 |  数字  | tf.add(a,b)   a+b | tf.subtract(a,b)    a-b | tf.multiply(a,b)    a*b | tf.divide(a,b)    a/b |
 |  矩阵  | tf.add(a,b)   a+b | tf.subtract(a,b)    a-b |     tf.matmul(a,b)      |                       |
 
-在对矩阵操作时，同样可以使用tf.multiply(a,b)或a*b，但这两种方式得到了不是矩阵乘法，而是矩阵元素对应相乘
+**在对矩阵操作时，同样可以使用tf.multiply(a,b)或a*b，但这两种方式得到了不是矩阵乘法，而是矩阵元素对应相乘**
 
+![1499865929(1).jpg](https://github.com/ChaoZeyi/DeepLearning/blob/master/tensorFlow_ex/official_tutorial/photos/1499865929(1).jpg?raw=true)
 
+tf.divide(a,b)和a/b也是同理
 
 求逆矩阵：c = tf.matrix_inverse(a)
 
