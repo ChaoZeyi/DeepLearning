@@ -28,11 +28,19 @@ sess.run(tf.assign(b, 2))
 
 ![1499865929(1).jpg](https://github.com/ChaoZeyi/DeepLearning/blob/master/tensorFlow_ex/official_tutorial/photos/1499865929(1).jpg?raw=true)
 
+**tf.matmul(a,b)与tf.matmul(b,a)不相等**
+
 tf.divide(a,b)和a/b也是同理
 
 求逆矩阵：c = tf.matrix_inverse(a)
 
+reduce_sum(a)，求张量各维数的和。a = [[1,2],[3,4]]，reduce_sum(a) = 10
+
 ### FAQ
+
+##### 基本步骤
+
+将模型参数作为变量，数据输入作为占位符，根据模型结构写出输出与输入、参数之间的关系式，得到代价函数，选择优化算法进行训练，同时确定训练的学习速率和训练次数。初始化变量，开始训练，然后测试训练效果。
 
 ##### one_hot
 

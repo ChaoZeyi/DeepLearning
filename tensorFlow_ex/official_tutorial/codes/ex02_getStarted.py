@@ -55,11 +55,11 @@ print(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))
 
 
 ####################train######################
-optimizer = tf.train.GradientDescentOptimizer(0.01)
+optimizer = tf.train.GradientDescentOptimizer(0.01)#选择优化算法，学习速率为0.01
 train = optimizer.minimize(loss)
 sess.run(init)
 print(sess.run(w))
-for i in range(1000):
+for i in range(1000):#训练次数为1000次
     sess.run(train, {x:[1,2,3,4], y:[0,-1,-2,-3]})
 print(sess.run([w,b]))
 print(sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))

@@ -57,12 +57,18 @@ e = tf.matmul(a, b)
 print(sess.run(c))
 print(sess.run(d))
 print(sess.run(e))
-
+f = tf.matmul(b,a)
+print(sess.run(f))
 ###############divide###########
 c = tf.divide(a, b)
 d = a/b
-e = tf.matrix_inverse(c)             #############求逆矩阵########
+e = tf.matrix_inverse(c)#############求逆矩阵########
 f = tf.matmul(c,e)
 print(sess.run(c))
 print(sess.run(d))
 print(sess.run(f))
+
+#####################求最大值处的索引################
+a = tf.constant([[1,2,3],[0,1,0]])
+with tf.Session() as sess:
+    print(sess.run(tf.argmax(a,1)))
