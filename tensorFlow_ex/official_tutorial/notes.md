@@ -17,6 +17,12 @@ sess.run(init)
 
 sess.run(tf.assign(b, 2))
 
+标量：0阶张量
+
+向量：1阶张量
+
+矩阵：N阶张量
+
 #### 数据操作
 
 |      |         加         |            减            |            乘            |           除           |
@@ -41,6 +47,14 @@ reduce_sum(a)，求张量各维数的和。a = [[1,2],[3,4]]，reduce_sum(a) = 1
 ##### 基本步骤
 
 将模型参数作为变量，数据输入作为占位符，根据模型结构写出输出与输入、参数之间的关系式，得到代价函数，选择优化算法进行训练，同时确定训练的学习速率和训练次数。初始化变量，开始训练，然后测试训练效果。
+
+##### tensorBoard
+
+tf.summary.FileWriter('路径/myGraph', sess.graph)
+
+进入该目录下，运行>tensorboard --logdir="myGraph"
+
+运行之后，相当于开启了tensorFlow，浏览http://localhost:6006
 
 ##### one_hot
 

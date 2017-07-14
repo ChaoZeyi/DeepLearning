@@ -72,3 +72,8 @@ print(sess.run(f))
 a = tf.constant([[1,2,3],[0,1,0]])
 with tf.Session() as sess:
     print(sess.run(tf.argmax(a,1)))
+
+#####################取模运算####################
+c = tf.mod(10,3)
+print(sess.run(c))
+sess.close()

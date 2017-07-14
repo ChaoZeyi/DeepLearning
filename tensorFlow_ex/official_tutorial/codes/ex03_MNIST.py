@@ -32,4 +32,4 @@ for i in range(1000):
 correction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correction,'float32'))
 print(sess.run(accuracy, {x:mnist.test.images, y_:mnist.test.labels}))
-sess.run(w)
+sess.close()
