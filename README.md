@@ -14,6 +14,8 @@
 
   https://github.com/sjchoi86/dl_tutorials
 
+- 《神经网络与深度学习讲义》
+
 ### TensorFlow
 
 - 官方教程

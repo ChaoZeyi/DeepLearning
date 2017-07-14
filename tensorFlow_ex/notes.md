@@ -72,3 +72,24 @@ tf.summary.FileWriter('路径/myGraph', sess.graph)
 
 https://www.quora.com/What-does-the-one_hot-True-parameter-on-the-MNIST-tensorflow-for-beginners-example-mean
 
+##### graph
+
+> 加载tensorflow库时，会自动创建一个graph对象，作为默认的数据流图
+>
+> 使用g1 = tf.get_default_graph()获取默认数据流图的句柄
+>
+> g2 = tf.Graph()创建新的数据流图
+>
+> with g1.as_default():
+>
+> ​	Op
+>
+> with g2.as_default():
+>
+> ​	Op
+>
+> 分别为两个数据流图添加Op，如果没有指定数据流图，则加入默认数据流图
+
+**在大多数TensorFlow程序中，只使用默认数据流图就足够了。然而，如果需要定义多个相互之间不存在依赖关系的模型，则创建多个Graph对象十分有用。**
+
+如果存在多个数据流图，在调用Session()时，需要显示指定运行的是哪个graph，不然会默认执行默认数据流图
