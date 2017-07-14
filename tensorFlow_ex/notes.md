@@ -17,6 +17,9 @@ sess.run(init)
 
 sess.run(tf.assign(b, 2))
 
+在能够自动训练机器学习模型的Optimizer类，这意味着这些类将自动修改Variable对象的值，而无须显式做出请求。但如果要求一些Variable对象只可手工修改，而不允许使用Optimizer类时，可在创建这些Variable对象时将其trainable参数设
+为False：b = tf.Variable(1, dtype=tf.float32, trainable=False)
+
 标量：0阶张量
 
 向量：1阶张量
