@@ -96,3 +96,8 @@ https://www.quora.com/What-does-the-one_hot-True-parameter-on-the-MNIST-tensorfl
 **在大多数TensorFlow程序中，只使用默认数据流图就足够了。然而，如果需要定义多个相互之间不存在依赖关系的模型，则创建多个Graph对象十分有用。**
 
 如果存在多个数据流图，在调用Session()时，需要显示指定运行的是哪个graph，不然会默认执行默认数据流图
+
+##### 检查点（checkpoint)
+
+tf.train.Saver
+
